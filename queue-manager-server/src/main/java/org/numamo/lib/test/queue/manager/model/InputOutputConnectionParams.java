@@ -2,7 +2,21 @@ package org.numamo.lib.test.queue.manager.model;
 
 import java.util.Map;
 
+
+/**
+ * The basic model of the configuration parameters
+ *
+ * @author Nazimov Aleksey I.
+ */
 public final class InputOutputConnectionParams {
+
+
+    /**
+     * JMS message type of the input or output queues
+     */
+    public enum JmsMessageType {
+        JMS_TEXT_MESSAGE, JMS_BYTE_MESSAGE
+    }
 
 
     // Variables and constructors:-------------------------------------------------------
@@ -16,6 +30,8 @@ public final class InputOutputConnectionParams {
     private String connectedInputQueue;
     private String connectedOutputQueue;
     private Map<String,String> additionalParams;
+
+    private JmsMessageType outputQueueMessageType;
 
 
     // Public API:-----------------------------------------------------------------------
@@ -83,6 +99,14 @@ public final class InputOutputConnectionParams {
         this.additionalParams = additionalParams;
     }
 
+    public JmsMessageType getOutputQueueMessageType() {
+        return outputQueueMessageType;
+    }
+
+    public void setOutputQueueMessageType(JmsMessageType outputQueueMessageType) {
+        this.outputQueueMessageType = outputQueueMessageType;
+    }
+
     @Override
     public String toString() {
         return "InputOutputConnectionParams{" +
@@ -94,8 +118,8 @@ public final class InputOutputConnectionParams {
                 ", connectedInputQueue='" + connectedInputQueue + '\'' +
                 ", connectedOutputQueue='" + connectedOutputQueue + '\'' +
                 ", additionalParams=" + additionalParams +
+                ", outputQueueMessageType=" + outputQueueMessageType +
                 '}';
     }
-
 
 }

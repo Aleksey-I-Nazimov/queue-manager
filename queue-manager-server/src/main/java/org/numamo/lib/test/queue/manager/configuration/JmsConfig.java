@@ -1,6 +1,6 @@
 package org.numamo.lib.test.queue.manager.configuration;
 
-import org.numamo.lib.test.queue.manager.service.api.InputOutputJmsProvider;
+import org.numamo.lib.test.queue.manager.service.api.input.output.InputOutputJmsProvider;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Configuration;
 

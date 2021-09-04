@@ -1,4 +1,4 @@
-package org.numamo.lib.test.queue.manager.service.api;
+package org.numamo.lib.test.queue.manager.service.api.input.output;
 
 
 import org.numamo.lib.test.queue.manager.model.InputOutputConnectionParams;
